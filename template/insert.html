@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Insert Data</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/tailwind/tailwind.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="../shuffle-for-tailwind.png">
+  <script src="../js/main.js"></script>
+  <script type="module" src="../js/fetch.js"></script>
+</head>
+
+<body class="antialiased bg-body text-body font-body">
+  <div class="">
+
+    <section class="overflow-hidden min-h-full">
+      <div class="relative z-50 flex items-center justify-between xl:hidden bg-coolGray-900 px-8 py-5 -mx-3">
+        <div class="w-auto px-3">
+          <a class="block max-w-max" href="#">
+            <img src="" alt="">
+          </a>
+        </div>
+        <div class="w-auto px-3">
+          <button class="navbar-burger self-center ml-auto block xl:hidden">
+            <svg width="35" height="35" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect class="text-coolGray-800" width="32" height="32" rx="6" fill="currentColor"></rect>
+              <path class="text-coolGray-400"
+                d="M7 12H25C25.2652 12 25.5196 11.8946 25.7071 11.7071C25.8946 11.5196 26 11.2652 26 11C26 10.7348 25.8946 10.4804 25.7071 10.2929C25.5196 10.1054 25.2652 10 25 10H7C6.73478 10 6.48043 10.1054 6.29289 10.2929C6.10536 10.4804 6 10.7348 6 11C6 11.2652 6.10536 11.5196 6.29289 11.7071C6.48043 11.8946 6.73478 12 7 12ZM25 15H7C6.73478 15 6.48043 15.1054 6.29289 15.2929C6.10536 15.4804 6 15.7348 6 16C6 16.2652 6.10536 16.5196 6.29289 16.7071C6.48043 16.8946 6.73478 17 7 17H25C25.2652 17 25.5196 16.8946 25.7071 16.7071C25.8946 16.5196 26 16.2652 26 16C26 15.7348 25.8946 15.4804 25.7071 15.2929C25.5196 15.1054 25.2652 15 25 15ZM25 20H7C6.73478 20 6.48043 20.1054 6.29289 20.2929C6.10536 20.4804 6 20.7348 6 21C6 21.2652 6.10536 21.5196 6.29289 21.7071C6.48043 21.8946 6.73478 22 7 22H25C25.2652 22 25.5196 21.8946 25.7071 21.7071C25.8946 21.5196 26 21.2652 26 21C26 20.7348 25.8946 20.4804 25.7071 20.2929C25.5196 20.1054 25.2652 20 25 20Z"
+                fill="currentColor"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="xl:ml-24">
+        <div>
+          <div class="container mx-auto">
+            <section class="bg-coolGray-50 py-4">
+              <div class="container px-4 mx-auto">
+                <div class="p-6 h-full border border-coolGray-100 overflow-hidden bg-white rounded-md shadow-dashboard">
+                  <div class="pb-6 border-b border-coolGray-100">
+                    <div class="flex flex-wrap items-center justify-between -m-2">
+                      <div class="w-full md:w-auto p-2">
+                        <h2 class="text-coolGray-900 text-lg font-semibold">Insert Data</h2>
+                        <p class="text-xs text-coolGray-500 font-medium">Data Pasien</p>
+                      </div>
+                      <div class="w-full md:w-auto p-2">
+                        <div class="flex flex-wrap justify-between -m-1.5">
+                          <div class="w-full md:w-auto p-1.5">
+                            <button
+                              class="flex flex-wrap justify-center w-full px-4 py-2 font-medium text-sm text-coolGray-500 hover:text-coolGray-600 border border-coolGray-200 hover:border-coolGray-300 bg-white rounded-md shadow-button">
+                              <p>Cancel</p>
+                            </button>
+                          </div>
+                          <div class="w-full md:w-auto p-1.5">
+                            <button id="button"
+                              class="flex flex-wrap justify-center w-full px-4 py-2 bg-green-500 hover:bg-green-600 font-medium text-sm text-white border border-green-500 rounded-md shadow-button">
+                              <p>Save</p>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Nama Pasien</p>
+                        </div>
+                        <div class="w-full md:flex-1 p-3">
+                          <input id="pasienName"
+                            class="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input"
+                            type="text" placeholder="Nama">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Jenis Kelamin</p>
+                        </div>
+                        <div class="w-full md:w-1/3 p-3">
+                          <div class="relative">
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2" width="16" height="16"
+                              viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M11.3333 6.1133C11.2084 5.98913 11.0395 5.91943 10.8633 5.91943C10.6872 5.91943 10.5182 5.98913 10.3933 6.1133L8.00001 8.47329L5.64001 6.1133C5.5151 5.98913 5.34613 5.91943 5.17001 5.91943C4.99388 5.91943 4.82491 5.98913 4.70001 6.1133C4.63752 6.17527 4.58792 6.249 4.55408 6.33024C4.52023 6.41148 4.50281 6.49862 4.50281 6.58663C4.50281 6.67464 4.52023 6.76177 4.55408 6.84301C4.58792 6.92425 4.63752 6.99799 4.70001 7.05996L7.52667 9.88663C7.58865 9.94911 7.66238 9.99871 7.74362 10.0326C7.82486 10.0664 7.912 10.0838 8.00001 10.0838C8.08801 10.0838 8.17515 10.0664 8.25639 10.0326C8.33763 9.99871 8.41136 9.94911 8.47334 9.88663L11.3333 7.05996C11.3958 6.99799 11.4454 6.92425 11.4793 6.84301C11.5131 6.76177 11.5305 6.67464 11.5305 6.58663C11.5305 6.49862 11.5131 6.41148 11.4793 6.33024C11.4454 6.249 11.3958 6.17527 11.3333 6.1133Z"
+                                fill="#8896AB"></path>
+                            </svg>
+                            <select id="gender"
+                              class="appearance-none w-full py-2.5 px-4 text-coolGray-900 text-base font-normal bg-white border outline-none border-coolGray-200 focus:border-green-500 rounded-lg shadow-input">
+                              <option>Perempuan</option>
+                              <option>Laki-laki</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Tanggal Lahir</p>
+                        </div>
+                        <div class="w-full md:flex-1 p-3">
+                          <input id="ttl"
+                            class="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input"
+                            type="text" placeholder="Tanggal Lahir">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Status</p>
+                        </div>
+                        <div class="w-full md:w-1/3 p-3">
+                          <div class="relative">
+                            <svg class="absolute right-4 top-1/2 transform -translate-y-1/2" width="16" height="16"
+                              viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M11.3333 6.1133C11.2084 5.98913 11.0395 5.91943 10.8633 5.91943C10.6872 5.91943 10.5182 5.98913 10.3933 6.1133L8.00001 8.47329L5.64001 6.1133C5.5151 5.98913 5.34613 5.91943 5.17001 5.91943C4.99388 5.91943 4.82491 5.98913 4.70001 6.1133C4.63752 6.17527 4.58792 6.249 4.55408 6.33024C4.52023 6.41148 4.50281 6.49862 4.50281 6.58663C4.50281 6.67464 4.52023 6.76177 4.55408 6.84301C4.58792 6.92425 4.63752 6.99799 4.70001 7.05996L7.52667 9.88663C7.58865 9.94911 7.66238 9.99871 7.74362 10.0326C7.82486 10.0664 7.912 10.0838 8.00001 10.0838C8.08801 10.0838 8.17515 10.0664 8.25639 10.0326C8.33763 9.99871 8.41136 9.94911 8.47334 9.88663L11.3333 7.05996C11.3958 6.99799 11.4454 6.92425 11.4793 6.84301C11.5131 6.76177 11.5305 6.67464 11.5305 6.58663C11.5305 6.49862 11.5131 6.41148 11.4793 6.33024C11.4454 6.249 11.3958 6.17527 11.3333 6.1133Z"
+                                fill="#8896AB"></path>
+                            </svg>
+                            <select id="status"
+                              class="appearance-none w-full py-2.5 px-4 text-coolGray-900 text-base font-normal bg-white border outline-none border-coolGray-200 focus:border-green-500 rounded-lg shadow-input">
+                              <option>Belum Menikah</option>
+                              <option>Sudah Menikah</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">No Telepon</p>
+                        </div>
+                        <div class="w-full md:flex-1 p-3">
+                          <input id="phonenumber"
+                            class="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input"
+                            type="text" placeholder="No Telepon">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Alamat</p>
+                        </div>
+                        <div class="w-full md:flex-1 p-3">
+                          <input id="alamat"
+                            class="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input"
+                            type="text" placeholder="Alamat">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Dokter</p>
+                        </div>
+                        <div class="w-full md:w-1/3 p-3">
+                          <input  id="name"
+                            class="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input"
+                            type="text" placeholder="Nama Dokter">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="py-6 border-b border-coolGray-100">
+                    <div class="w-full md:w-9/12">
+                      <div class="flex flex-wrap -m-3">
+                        <div class="w-full md:w-1/3 p-3">
+                          <p class="text-sm text-coolGray-800 font-semibold">Diagnosis</p>
+                        </div>
+                        <div class="w-full md:w-1/3 p-3">
+                          <input  id="diagnosis"
+                            class="w-full px-4 py-2.5 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input"
+                            type="text" placeholder="Diagnosis">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- <div class="pt-6">
+              <div class="w-full md:w-9/12">
+                <div class="flex flex-wrap -m-3">
+                  <div class="w-full md:w-1/3 p-3">
+                    <p class="text-sm text-coolGray-800 font-semibold">Masalah yang dialami</p>
+                    <p class="text-xs text-coolGray-500 font-medium">Lorem ipsum dolor sit amet</p>
+                  </div>
+                  <div class="w-full md:flex-1 p-3"><textarea class="block w-full h-64 p-6 text-base text-coolGray-900 font-normal outline-none focus:border-green-500 border border-coolGray-200 rounded-lg shadow-input resize-none"></textarea></div>
+                </div>
+              </div>
+            </div> -->
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="../js/controller/post.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="../js/charts-demo.js"></script>
+</body>
+
+</html>

@@ -6,27 +6,23 @@ import { urlPUT, AmbilResponse} from "../config/url_put.js";
 function pushData(){
     
     let data = {
-        namaPasien : getValue("pasienName"),
+        pasienName : getValue("pasienName"),
         gender : getValue("gender"),
         ttl : getValue("ttl"),
         status : getValue("status"),
-        phone_number : getValue("phonenumber"),
+        phonenumber : getValue("phoneNumber"),
         alamat : getValue("alamat"),
         doctor : {
-            namaDokter : getValue("nama"),
-            speciality : getValue("speciality"),
-            contact : getValue("contact"),
+            name : getValue("doctorName"),
         },
         medicalRecord :{
-            visitDate : getValue("visitdate"),
-            diganosis : getValue("diagnosis"),
-            treatment : getValue("treatment"),
-            notes : getValue("notes"),
+            diagnosa : getValue("diagnosis"),
+            
         }
     }
-    postData(urlPOST, data, AmbilResponse);
+    putData(urlPUT, data, AmbilResponse);
 
 }
 
 
-onClick("button", pushData);
+onClick("submitButton", pushData);

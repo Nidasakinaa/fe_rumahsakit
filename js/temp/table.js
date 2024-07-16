@@ -4,32 +4,22 @@ export let isiTabel =
     <th class="whitespace-nowrap px-4 bg-white text-left">
         <div class="flex items-center -m-2">
             <div class="w-auto p-2">
-                <input class="w-4 h-4 bg-white rounded" type="checkbox">
-            </div>
-            <div class="w-auto p-2">
-                <div class="flex items-center justify-center w-10 h-10 text-base font-medium text-#WARNALOGO#-600 bg-#WARNALOGO#-200 rounded-md">ULBI</div>
-            </div>
-            <div class="w-auto p-2">
                 <p class="text-xs font-semibold text-coolGray-800">#NAMA#</p>
-                <p class="text-xs font-medium text-coolGray-500">#NOHP#</p>
             </div>
         </div>
     </th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#GENDER#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#TTL#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#STATUS#</th>
-    <th class="whitespace-nowrap px-4 bg-white text-left">
-        <div class="w-auto p-2">
-        <p class="text-xs font-semibold text-coolGray-800">#DOKTER#</p>
-        <p class="text-xs font-medium text-coolGray-500">#DIAGNOSIS#</p>
-        </div>
-    </th>
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#NOHP#</th>
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#ALAMAT#</th>
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#DOCTOR#</th>
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#DIAGNOSIS#</th>
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
         <a type="button" href="edit.html?pasienId=#IDEDIT#"> Edit
         </a>
         |
-        <button type="button" id="del_button" onclick="confirmDelete('#IDHAPUS#')"> Delete
-        </button>
+        <button type="button" id="deleteButton" onclick="confirmDelete('#IDHAPUS#')"> Delete </button>
     </th>
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
         <svg class="ml-auto" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">

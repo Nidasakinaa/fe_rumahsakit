@@ -109,35 +109,39 @@
       <div class="card mt-4 shadow-sm">
         <div class="card-header bg-dark text-white">
           <h2 id="patients" class="mb-0">Patient Data</h2>
+          <a href="insert.html" class="btn btn-success"><i class="fas fa-plus"></i> Add New Patient</a>
         </div>
         <div class="card-body">
-          <table class="table table-striped table-hover">
-            <thead class="thead-dark">
-              <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Tanggal Lahir</th>
-                <th>No. HP</th>
-                <th>Alamat</th>
-                <th>Aksi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>John Doe</td>
-                <td>Male</td>
-                <td>1979-06-20</td>
-                <td>+123456789</td>
-                <td>Jl. Kebon Jeruk No. 3</td>
-                <td>
-                    <a href="detail.html">detail</a>
-                    <a href="edit.html">edit</a>
-                    <a href="">delete</a>
-                </td>
-              </tr>
-            </tbody>
+          <table class="w-full" id="iniTabel">
+            <tr class="whitespace-nowrap h-11 bg-coolGray-50 bg-opacity-80 border-b border-coolGray-100">
+              <th class="px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                <div class="flex items-center">
+                  <input class="mr-3 w-4 h-4 bg-white rounded" type="checkbox">
+                  <p>Nama Pasien</p>
+                </div>
+              </th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-center">
+                Jenis Kelamin</th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                Tanggal Lahir</th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                Status</th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                No.Telp</th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                Alamat</th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                Nama Dokter</th>
+              <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                Diagnosis</th>
+                <th class="whitespace-nowrap px-4 font-semibold text-xs text-coolGray-500 uppercase text-left">
+                Aksi</th>
+            </tr>
+
+            <!-- ISI TABEL DARI SINI (BUAT pada FILE tabel.js) -->
+
+            <!-- ISI TABEL SAMPAI DISINI (BUAT pada FILE tabel.js) -->
+
           </table>
         </div>
       </div>
@@ -148,5 +152,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/controller/delete.js"></script>
+
 </body>
 </html>

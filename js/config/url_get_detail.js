@@ -1,4 +1,3 @@
-//Mendapatkan parameter dari URL
 const urlParams = new URLSearchParams(window.location.search);
 const pasienId = urlParams.get("pasienId");
 

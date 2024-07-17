@@ -8,14 +8,15 @@ function pushData(){
     let data = {
         pasienName : getValue("pasienName"),
         gender : getValue("gender"),
-        usia : getValue("usia"),
-        phonenumber : getValue("phonenumber"),
+        ttl : getValue("ttl"),
+        status : getValue("status"),
+        phonenumber : getValue("phoneNumber"),
         alamat : getValue("alamat"),
         doctor : {
             name : getValue("doctorName"),
         },
         medicalRecord :{
-            diagnosa : getValue("diagnosis"),
+            diagnosis : getValue("diagnosis"),
             
         }
     }

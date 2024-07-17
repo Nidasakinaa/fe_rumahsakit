@@ -9,7 +9,8 @@ export let isiTabel =
         </div>
     </th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#GENDER#</th>
-    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#USIA#</th>
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#TTL#</th>
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#STATUS#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#NOHP#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#ALAMAT#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#DOCTOR#</th>

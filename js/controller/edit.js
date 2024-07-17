@@ -3,7 +3,6 @@ export function isiData(results) {
       { id: 'pasienName', path: 'pasienName' },
       { id: 'gender', path: 'gender' },
       { id: 'usia', path: 'usia' },
-      { id: 'status', path: 'status' },
       { id: 'phonenumber', path: 'phonenumber' },
       { id: 'alamat', path: 'alamat' },
       { id: 'doctorName', path: 'doctor.name' },

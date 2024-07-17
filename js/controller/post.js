@@ -13,7 +13,7 @@ function pushData() {
             name: getValue("name"),
         },
         medicalRecord: {
-            diagnosa: getValue("diagnosis"),
+            diagnosis: getValue("diagnosis"),
         }
     };
     postData(urlPOST, data, AmbilResponse);

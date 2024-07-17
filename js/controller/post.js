@@ -14,7 +14,7 @@ function pushData() {
         },
         medicalRecord: {
             diagnosis: getValue("diagnosis"),
-        }
+        },
     };
     postData(urlPOST, data, AmbilResponse);
 }

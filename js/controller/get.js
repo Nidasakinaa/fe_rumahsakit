@@ -3,6 +3,7 @@ import { addInner } from "https://bukulapak.github.io/element/process.js";
 import { isiTabel } from "../temp/table.js";
 export function isiTablePasien(results) {
     results.forEach(isiRow);
+    console.log(results);
 }
 function isiRow(value) {
     let content =

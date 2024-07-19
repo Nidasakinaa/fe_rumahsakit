@@ -7,17 +7,17 @@ export function isiTablePasien(results) {
 }
 function isiRow(value) {
     let content =
-        isiTabel.replace("#NAMA#", value.pasienName)
-            .replace("#GENDER#", value.gender)
-            .replace("#USIA#", value.usia)
-            .replace("#NOHP#", value.phonenumber)
-            .replace("#ALAMAT#", value.alamat)
-            .replace("#DOCTOR#", value.doctor.name)
-            .replace("#DSPECIALITY#", value.doctor.specialty) 
-            .replace("#DCONTACT#", value.doctor.contact)
-            .replace("#VISITDATE#", value.medicalRecord.visitdate)
-            .replace("#DIAGNOSIS#", value.medicalRecord.diagnosis)
-            .replace("#TREATMENT#", value.medicalRecord.treatment)
+        isiTabel.replace("#NAMA#", value.pasienName ? value.pasienName : "Nama tidak tersedia")
+            .replace("#GENDER#", value.gender ? value.gender : "Gender tidak tersedia")
+            .replace("#USIA#", value.usia ? value.usia : "Usia tidak tersedia")
+            .replace("#NOHP#", value.phonenumber ? value.phonenumber : "No.HP tidak tersedia")
+            .replace("#ALAMAT#", value.alamat ? value.alamat : "Alamat tidak tersedia")
+            .replace("#DOCTOR#", value.doctor.name ? value.doctor.name : "Nama dokter tidak tersedia")
+            .replace("#DSPECIALITY#", value.doctor.specialty ? value.doctor.specialty : "Gender tidak tersedia") 
+            .replace("#DCONTACT#", value.doctor.contact ? value.doctor.contact : "Kontak dokter tidak tersedia")
+            .replace("#VISITDATE#", value.medicalRecord.visitdate ? value.medicalRecord.visitdate : "Tanggal Kunjungan tidak tersedia")
+            .replace("#DIAGNOSIS#", value.medicalRecord.diagnosis ? value.medicalRecord.diagnosis : "Diagnosis tidak tersedia")
+            .replace("#TREATMENT#", value.medicalRecord.treatment ? value.medicalRecord.treatment : "Treatment tidak tersedia")
             .replace("#NOTES#", value.medicalRecord.notes)
             .replace("#IDEDIT#", value._id)
             .replace("#IDHAPUS#", value._id);

@@ -1,5 +1,5 @@
 import { addInner } from "https://bukulapak.github.io/element/process.js";
-import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
+// import { getRandomColor, getRandomColorName } from "https://bukulapak.github.io/image/process.js";
 import { isiTabel } from "../temp/table.js";
 export function isiTablePasien(results) {
     results.forEach(isiRow);
@@ -19,9 +19,9 @@ function isiRow(value) {
             .replace("#TREATMENT#", value.medicalRecord.treatment)
             .replace("#NOTES#", value.medicalRecord.notes)
             .replace("#IDEDIT#", value._id)
-            .replace("#IDHAPUS#", value._id)
-            .replace("#WARNA#", getRandomColor())
-            .replace(/#WARNALOGO#/g, getRandomColorName());
+            .replace("#IDHAPUS#", value._id);
+            // .replace("#WARNA#", getRandomColor());
+            // // .replace(/#WARNALOGO#/g, getRandomColorName());
 
     addInner("iniTabel", content);
 }

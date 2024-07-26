@@ -1,6 +1,7 @@
 export let isiTabel = 
 `
 <tr class="h-18 border-b border-coolGray-100">
+    <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#ID#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#NAMA#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-left">#GENDER#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-800 text-center">#USIA#</th>
@@ -9,10 +10,9 @@ export let isiTabel =
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#DOCTOR#</th>
     <th class="whitespace-nowrap px-4 bg-white text-sm font-medium text-coolGray-500 text-left">#DIAGNOSIS#</th>
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
-        <a type="button" href="edit.html?pasienId=#IDEDIT#"> Edit
-        </a>
+        <button type="button" class="btn btn-link p-0" onclick="window.location.href='edit.html?pasienId=#IDEDIT#'"> Edit </button>
         |
-        <button type="button" id="deleteButton" onclick="confirmDelete('#IDHAPUS#')"> Delete </button>
+        <button type="button" id="deleteButton" class="btn btn-link p-0" onclick="confirmDelete('#IDHAPUS#')"> Delete </button>
     </th>
     <th class="whitespace-nowrap pr-4 bg-white text-sm font-medium text-coolGray-800">
         <svg class="ml-auto" width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
